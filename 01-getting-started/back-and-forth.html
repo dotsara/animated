@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Getting started: moving back and forth</title>
+		<meta name="description" content="Moving an object and back and forth with CSS animations.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="styles/normalize.css">
+		<style type="text/css">
+
+			.ball-container {
+				background: lightgray;
+				overflow: hidden;
+				padding: 5vh;
+				width: 75%;
+			}
+
+			.ball {
+				background: lightblue;
+				border: 1px solid darkblue;
+				border-radius: 50%;
+				height: 5vh;
+				width: 5vh;
+				
+
+				-webkit-animation: 6s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s infinite alternate slidein;
+				animation: 6s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s infinite alternate slidein;
+			}
+			
+			@-webkit-keyframes slidein { from { margin-left: 5%; } to { margin-left: 95%; }  }
+				    @keyframes slidein { from { margin-left: 5%; } to { margin-left: 95%; }  }
+			
+			
+			
+		</style>
+	</head>
+	<body>
+
+		<header role="banner">
+			<h1></h1>
+		</header>
+
+		<section role="main">
+			<div class="ball-container">
+				<div class="ball"></div>
+			</div>
+		
+		</section>
+
+		<footer role="contentinfo">
+			<p>Made between weekend naps by <a href="https://github.com/dotsara">Sara</a>.</p>
+		</footer>
+
+	</body>
+</html>
