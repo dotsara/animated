@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Getting started: moving up and down</title>
+		<meta name="description" content="Moving an object up and down with CSS animations.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="styles/normalize.css">
+		<style type="text/css">
+
+			.ball-container {
+				background: lightgray;
+				height: 40vh;
+				overflow: hidden;
+				padding: 5vh;
+				width: 15vh;
+			}
+
+			.ball {
+				background: lightblue;
+				border: 1px solid darkblue;
+				border-radius: 50%;
+				height: 5vh;
+				width: 5vh;
+				
+
+				-webkit-animation: 2s ease-in 0s infinite alternate slidein;
+				animation: 2s ease-in 0s infinite alternate slidein;
+			}
+			
+			@-webkit-keyframes slidein { from { margin-top: 5%; } to { margin-top: 100%; }  }
+				    @keyframes slidein { from { margin-top: 5%; } to { margin-top: 100%; }  }
+					
+			/* 
+				As it's only 2nd animation, an an experiment to boot, I don't
+				_fully_ understnad this one. Reorienting the container to be a 
+				tall column vs. a wide rectangle and changing the direction of
+				animation might've been too many things changing at once for my
+				second time out. Still.
+			
+				I definitely want to understand why the margin-top destinations
+				don't make the ball behave the way I expected (which was to bounce
+				at either end of the column).
+			*/			
+		</style>
+	</head>
+	<body>
+
+		<header role="banner">
+			<h1></h1>
+		</header>
+
+		<section role="main">
+			<div class="ball-container">
+				<div class="ball"></div>
+			</div>
+		
+		</section>
+
+		<footer role="contentinfo">
+			<p>Made between weekend naps by <a href="https://github.com/dotsara">Sara</a>.</p>
+		</footer>
+
+	</body>
+</html>
